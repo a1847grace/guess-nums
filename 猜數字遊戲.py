@@ -1,5 +1,9 @@
 import random
-password = random.randint(1, 100)
+passord_up = input ('請輸入猜數字隨機最大值')
+passord_up = int(passord_up)
+passord_down = input('請輸入猜數字隨機最小值')
+passord_down = int (passord_down)
+password = random.randint(passord_down, passord_up)
 user_password = input('請輸入一個數字')
 user_password = int(user_password)
 num = 1
@@ -19,7 +23,6 @@ while True:
 		num = num + 1
 		print ('您猜了第', num, '次')
 	else:
-		num = num + 1
 		print ('您猜中密碼了')
 		print ('您總計猜了', num, '次')
-		break
+		break	
